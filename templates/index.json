@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "hero": {
+          "type": "text"
+        },
+        "image": {
+          "type": "image_picker"
+        }
+      }
+    }
+  },
+  "order" : [
+    "hero",
+    "image"
+  ]
+}

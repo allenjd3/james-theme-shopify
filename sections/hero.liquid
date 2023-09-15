@@ -1,0 +1,51 @@
+<div>
+    {% for block in section.block %}
+        <h1>{{ block.settings.hero }}</h1>
+        <img src="{{ block.settings.hero-image }}" alt="myalt">
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "hero",
+  "tag": "section",
+  "class": "hero",
+  "limit": 1,
+  "settings": {
+  },
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "name": "Hero-Text",
+      "type": "hero-text",
+      "settings": {
+        "type": "text",
+        "id": "hero",
+        "label": "Hero"
+      }
+    },
+    {
+      "name": "Hero-Image",
+      "type": "hero-image",
+      "settings": {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero",
+      "blocks": [
+        {
+          "type": "hero-text"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
